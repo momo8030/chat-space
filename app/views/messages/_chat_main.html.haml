@@ -9,17 +9,10 @@
         %li.main-header__left-box__member-list__member ペディグリーチャム
     =link_to '/groups/1/edit' do
       .main-header__edit-btn Edit
+
   .messages
-    .message
-      .message__upper-info
-        %p.message__upper-info__talker ネセサリーやのにナササリー
-        %p.message__upper-info__date 4056/08/28(Mon)23:59:58
-      %p.message__text 力こそパワー!!!
-    .message
-      .message__upper-info
-        %p.message__upper-info__talker ネセサリーやのにナササリー
-        %p.message__upper-info__date 4056/08/28(Mon)22:59:58
-      %p.message__text 関節のパニック
+    = render @messages
+    
   .form
     = form_for [@group, @message] do |f|
       .input-box
