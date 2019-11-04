@@ -2,13 +2,14 @@
   .main-header
     .main-header__left-box
       %h2.main-header__left-box__current-group
-        ぷりぷりプリズナー
+        = @group.name
       %ul.main-header__left-box__member-list
-        member :
-        %li.main-header__left-box__member-list__member 無免ライダー
-        %li.main-header__left-box__member-list__member ペディグリーチャム
-    =link_to '/groups/1/edit' do
-      .main-header__edit-btn Edit
+        Member :
+        %li.main-header__left-box__member-list__member
+          - @group.users.each do |user|
+            = user.name
+    .main-header__edit-btn
+      =link_to "Edit", edit_group_path(params[:group_id])
 
   .messages
     = render @messages

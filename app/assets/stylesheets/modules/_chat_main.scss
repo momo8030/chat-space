@@ -24,17 +24,16 @@
         }
       }
     }
-    a {
-      color: $light_blue;
-      text-decoration: none;
-      .main-header__edit-btn {
-        height: 40px;
-        margin-top: 28px;
-        border: solid 1px $light_blue;
-        padding: 0 20px;
-        line-height: 40px;
-      }  
-    }
+    .main-header__edit-btn {
+      height: 40px;
+      margin-top: 28px;
+      border: solid 1px $light_blue;
+      padding: 0 20px;
+      line-height: 40px;
+      a {
+        color: $light_blue;
+      }
+    }  
   }
   .messages{
     height: calc(100vh - 190px);
